@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <style>
+      body {
+        margin: auto;
+        background-color: rgb(6, 6, 41);
+        border-color: aqua;
+      }
+      .header {
+        padding: 0.2px 2px;
+        margin:1rem 1rem;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 1px 5px rgb(34, 112, 112);
+      }
+      .logo {
+        margin-left: 2rem;
+        color:aqua;
+        margin-right: 20%;
+      }
+      .header ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none; /* To remove the dots*/
+      }
+      .header ul li input{
+        cursor: pointer;
+        margin-right: 12rem;
+        background-color: rgb(6, 6, 41);
+        color: aqua;
+        
+      }
+      .header ul li input:hover {
+        color: aqua;
+        border-color: aqua;
+      }
+      .main{
+        margin: 2rem 1rem; /*top and bottom margins are 4rem, right and left margins are 5rem*/
+        width: auto;
+        height: 37rem;
+        border-radius: 1rem;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 1px 10px rgb(34, 112, 112);
+      }
+      .left{
+        margin-top:8rem;
+        margin-left: 10rem;
+        
+      }
+      .text{
+        margin: 1rem 1rem;
+        color: white;
+      }
+      .socialmedia ul{
+        margin: 9rem 0rem 2rem;
+        height: 5rem;
+        width: 20rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        box-shadow: 0 1px 10px rgb(34, 112, 112);
+      }
+      .socialmedia img{
+        max-width: 40px;
+        max-height: 40px;
+        aspect-ratio: 1;
+        cursor: pointer;
+        object-fit: contain;
+        background-color: white;
+        border-radius: 50px;
+        /*box-shadow: 0 1px 20px rgb(34, 112, 112);*/
+        
+      }
+      .socialmedia img:hover{
+        box-shadow: 0 1px 20px rgb(34, 112, 112);
+      }
+      .right{
+        margin: 2rem 5rem;
+        width: 30rem;
+        height: 30rem;        
+      }
+      .bg{
+        width: 32rem;
+        height: 32rem;
+        margin-bottom: 5rem;
+        border-radius: 2rem 10.5rem;
+        background-color: rgba(63, 60, 135, 0.258);
+        box-shadow: 0 1px 20px rgb(34, 112, 112);
+        
+      }
+      .right img{
+        margin-left:5rem;
+        max-height: 30rem;
+        border-color: aqua;      
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><h1>logo</h1></div>
+      <ul>
+        <li><a href="E:\Project\Portfolio\portfolio.html"><input type="button" value="Home"></input></a></li>
+        <li><a href="#"><input type="button" value="Skills"></a></li>
+        <li><a href="#"><input type="button" value="Experience"></a></li>
+        <li><a href="#"><input type="button" value="About"></a></li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="left">
+        <div class="text">
+          <h2>Hi there...</h2>
+          <p>I'm
+            <b style="color: aqua;">PUTTAMANENI ARAVIND</b>
+            This is my personal Portfolio website.
+          </p>
+          <div class="socialmedia">
+            <ul>
+              <li>
+                <a href="https://github.com/A1348089" target="_blank"
+                  ><img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt=""
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/p-aravind-04468624b/"
+                  target="_blank"
+                  ><img
+                    src="https://static.vecteezy.com/system/resources/previews/018/930/585/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png"
+                    alt=""
+                /></a>
+              </li>
+              <li>
+                <a href="" target="_blank"
+                  ><img
+                    src="https://www.pngitem.com/pimgs/m/20-209894_transparent-round-logo-png-round-facebook-icon-png.png"
+                    alt="facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/paravind8811/" target="_blank"
+                  ><img
+                    src="https://cdn.freebiesupply.com/images/large/2x/instagram-icon-white-on-black-circle.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="bg">
+          <img src="1690884305619.png" alt="">
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
