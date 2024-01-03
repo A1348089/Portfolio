@@ -3,165 +3,521 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/26241e6d54.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
-
-    <style>
-      body {
-        margin: auto;
-        background-color: rgb(6, 6, 41);
-        border-color: aqua;
-      }
-      .header {
-        padding: 0.2px 2px;
-        margin:1rem 1rem;
-        display: flex;
-        align-items: center;
-        box-shadow: 0 1px 5px rgb(34, 112, 112);
-      }
-      .logo {
-        margin-left: 2rem;
-        color:aqua;
-        margin-right: 20%;
-      }
-      .header ul{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        list-style: none; /* To remove the dots*/
-      }
-      .header ul li input{
-        cursor: pointer;
-        margin-right: 12rem;
-        background-color: rgb(6, 6, 41);
-        color: aqua;
-        
-      }
-      .header ul li input:hover {
-        color: aqua;
-        border-color: aqua;
-      }
-      .main{
-        margin: 2rem 1rem; /*top and bottom margins are 4rem, right and left margins are 5rem*/
-        width: auto;
-        height: 37rem;
-        border-radius: 1rem;
-        display: flex;
-        justify-content: space-between;
-        box-shadow: 0 1px 10px rgb(34, 112, 112);
-      }
-      .left{
-        margin-top:8rem;
-        margin-left: 10rem;
-        
-      }
-      .text{
-        margin: 1rem 1rem;
-        color: white;
-      }
-      .socialmedia ul{
-        margin: 9rem 0rem 2rem;
-        height: 5rem;
-        width: 20rem;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        list-style: none;
-        box-shadow: 0 1px 10px rgb(34, 112, 112);
-      }
-      .socialmedia img{
-        max-width: 40px;
-        max-height: 40px;
-        aspect-ratio: 1;
-        cursor: pointer;
-        object-fit: contain;
-        background-color: white;
-        border-radius: 50px;
-        /*box-shadow: 0 1px 20px rgb(34, 112, 112);*/
-        
-      }
-      .socialmedia img:hover{
-        box-shadow: 0 1px 20px rgb(34, 112, 112);
-      }
-      .right{
-        margin: 2rem 5rem;
-        width: 30rem;
-        height: 30rem;        
-      }
-      .bg{
-        width: 32rem;
-        height: 32rem;
-        margin-bottom: 5rem;
-        border-radius: 2rem 10.5rem;
-        background-color: rgba(63, 60, 135, 0.258);
-        box-shadow: 0 1px 20px rgb(34, 112, 112);
-        
-      }
-      .right img{
-        margin-left:5rem;
-        max-height: 30rem;
-        border-color: aqua;      
-      }
-
-    </style>
   </head>
-  <body>
-    <div class="header">
-      <div class="logo"><h1>logo</h1></div>
-      <ul>
-        <li><a href="E:\Project\Portfolio\portfolio.html"><input type="button" value="Home"></input></a></li>
-        <li><a href="#"><input type="button" value="Skills"></a></li>
-        <li><a href="#"><input type="button" value="Experience"></a></li>
-        <li><a href="#"><input type="button" value="About"></a></li>
-      </ul>
-    </div>
-    <div class="main">
-      <div class="left">
-        <div class="text">
-          <h2>Hi there...</h2>
-          <p>I'm
-            <b style="color: aqua;">PUTTAMANENI ARAVIND</b>
-            This is my personal Portfolio website.
-          </p>
-          <div class="socialmedia">
-            <ul>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#navbar-example2"
+    data-bs-offset="0"
+    id="body"
+  >
+    <header class="header-wrapper fixed-top">
+      <nav
+        id="navbar-example2"
+        class="navbar navbar-expand-lg bg-body-tertiary"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#"> <h1>P Aravind</h1> </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav nav-pills menu-navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="--i: 1 !important"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="--i: 2" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="--i: 3" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="--i: 4" href="#portfolio">Works</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="--i: 5" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+            target: "#navbar-example2",
+            offset: 0,
+          });
+        });
+      </script>
+    </header>
+    <div class="container-fluid" style="height: 70px"></div>
+    <!-- Banner Section -->
+    <section id="home" class="banner_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="text col-sm-12 text-md-start">
+            <h3>Hello!, I'm</h3>
+            <h1>Aravind Puttamaneni <br /></h1>
+            <h3>
+              And I'm a
+              <span class="animate-text">Fresher Web Developer</span>
+            </h3>
+            <p></p>
+            <div class="mt-5">
+              <a
+                class="btn2 animate-btn"
+                href="Puttamaneni_Aravind_Software_Engineering_Resume.pdf"
+                download="Puttamaneni_Aravind_Software_Engineering_Resume"
+                >Downlode Resume</a
+              >
+            </div>
+          </div>
+          <!-- <div class="col-sm-6 home-img">
+            <img src="Aravind_pic.png" alt="" />
+          </div> -->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about_warpper">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-lg-5 mb-4 lg-0">
+            <img
+              src="Aravind_pic.png"
+              alt="My-pic"
+              class="img-fluid rounded-3"
+            />
+          </div>
+          <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
+            <div class="my-3 my-lg-0">
+              <h2>About Me</h2>
+              <p>
+                Aravind Puttamaneni. Graduated in B.sc Computer Science in SVA
+                Government college Men's, srikalahasti, looking for fresher
+                Full-Stack Developer role
+              </p>
+            </div>
+            <div class="content pt-4">
+              <ul
+                class="nav nav-pills justify-content-center justify-content-lg-between mb-3"
+                id="pills-tab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="pills-education-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-education"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-education"
+                    aria-selected="true"
+                  >
+                    Education
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-certification-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-certification"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-certification"
+                    aria-selected="false"
+                  >
+                    Certifications
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="pills-experience-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-experience"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-experience"
+                    aria-selected="false"
+                  >
+                    Experience
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-education"
+                  role="tabpanel"
+                  aria-labelledby="pills-education-tab"
+                  tabindex="0"
+                >
+                  <ul class="text-start ps-0">
+                    <li style="--i: 1 !important">
+                      <a href="#"
+                        ><span>B.sc</span> MSCs
+                        <span> - SVA Govt. college Men's</span></a
+                      >2020-2023
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#"
+                        >Intermediate <span> - Vikram Jr. College</span></a
+                      >2018-2020
+                    </li>
+                    <li style="--i: 3">
+                      <a href="#">SSC <span> - MJM E.M High School</span></a>
+                      2017-2018
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-certification"
+                  role="tabpanel"
+                  aria-labelledby="pills-certification-tab"
+                  tabindex="0"
+                >
+                  <ul class="text-start ps-0">
+                    <li style="--i: 1 !important">
+                      <a href="#"
+                        ><span>AI-900</span> Microsoft Azure AI Fundamentals
+                        <span> - Microsoft</span></a
+                      >2020-2023
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#"
+                        >Azure AI Fundamentals<span> - Microsoft</span></a
+                      >Dec 20, 2022
+                    </li>
+                    <li style="--i: 3">
+                      <a href="#"
+                        >Python Full-Stack Development<span>
+                          - Pantech e Learning</span
+                        ></a
+                      >
+                      28-02-2023 to 29-03-2023
+                    </li>
+                    <li style="--i: 4">
+                      <a href="#"
+                        >Machine Learning<span> - Pantech e Learning</span></a
+                      >
+                      11-01-2023 to 10-02-2023
+                    </li>
+                    <li style="--i: 5">
+                      <a href="#"
+                        >Java Programing<span> - Great Learning</span></a
+                      >
+                      Aug 2022
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-experience"
+                  role="tabpanel"
+                  aria-labelledby="pills-experience-tab"
+                  tabindex="0"
+                >
+                  <ul class="text-start ps-0">
+                    <li style="--i: 1 !important">
+                      <a href="#"
+                        ><span>web-development and Python Intern(Online)</span>
+                        - APP GENESIS SOFT SOLUTIONS PVT LTD
+                      </a>
+                      01-May-2023 to 20-july-2023
+                    </li>
+                    <li style="--i: 2">
+                      <a href="#"
+                        ><span>web-development Intern(Online)</span> - APP
+                        GENESIS SOFT SOLUTIONS PVT LTD </a
+                      >10-Sep-2023 to On-Goining
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services -->
+    <section id="services" class="services_wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <h2>My Services</h2>
+            <p>
+              Aravind Puttamaneni. Graduated in B.sc Computer Science in SVA
+              Government college Men's, srikalahasti, looking for fresher
+              Full-Stack Developer role
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 md-4">
+            <div class="card">
+              <div class="card-body text-md-start text-center">
+                <img
+                  src="https://www.sifl-training.com/wp-content/uploads/2022/07/web-icon-03.png"
+                  alt="web-development"
+                  class="img-fluid md-4"
+                />
+                <h3>Web design</h3>
+                <p>............................</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 md-4">
+            <div class="card">
+              <div class="card-body text-md-start text-center">
+                <img
+                  src="https://th.bing.com/th/id/R.b6d3a7cb78250f112acc57fbc27c173b?rik=uDcXiQwVPKNmng&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_5361.png&ehk=OQo9z0l82eoptuSgvjJOh4U8ubdqsYT%2bFayF8V6nHCU%3d&risl=&pid=ImgRaw&r=0"
+                  alt="sql"
+                  class="img-fluid md-4"
+                />
+                <h3>SQL</h3>
+                <p>..................</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 md-4">
+            <div class="card">
+              <div class="card-body text-md-start text-center">
+                <img
+                  src="https://cdn3.iconfinder.com/data/icons/seo-outline-and-internet-marketing/512/Configuration_customize_preferences-256.png"
+                  alt="support"
+                  class="img-fluid md-4"
+                />
+                <h3>Support</h3>
+                <p>.................</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio -->
+    <section id="portfolio" class="portfolio_wrapper">
+      <div class="container">
+        <h2>My Work</h2>
+        <div class="row mt-4">
+          <div class="work col-lg-4 col-md-6 mb-4">
+            <img
+              src="https://th.bing.com/th/id/R.64fb0c839235d0056d6036eb35acee93?rik=5YB4P2W4siyGkQ&riu=http%3a%2f%2fstatic5.ufreegames.io%2fcovers%2fsuper%2fmaze-alphabet.png&ehk=%2fQAtpNRGVaGwe%2fiAcscNQquDNtf2%2bdFrDJb7%2fUjyKgg%3d&risl=&pid=ImgRaw&r=0"
+              alt=""
+            />
+            <div class="layer">
+              <h3>Maze Game</h3>
+              <p>.............................................</p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-share-from-square"
+                  style="color: #0b0a0a"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="work col-lg-4 col-md-6 mb-4">
+            <img
+              src="https://i1.wp.com/www.smilingcolors.com/wp-content/uploads/2018/06/printable-to-do-list-color.jpg?ssl=1"
+              alt=""
+            />
+            <div class="layer">
+              <h3>To-Do-List</h3>
+              <p>.............................................</p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-share-from-square"
+                  style="color: #0b0a0a"
+                ></i>
+              </a>
+            </div>
+          </div>
+          <div class="work col-lg-4 col-md-6 mb-4">
+            <img
+              src="https://cdn.scratch.mit.edu/static/site/projects/thumbnails/1084/2912.png"
+              alt=""
+            />
+            <div class="layer">
+              <h3>Maze Game</h3>
+              <p>.............................................</p>
+              <a href="#">
+                <i
+                  class="fa-solid fa-share-from-square"
+                  style="color: #0b0a0a"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn2">see more</a>
+      </div>
+    </section>
+    <!-- contanct -->
+    <section id="contact" class="contact_wrapper bg-primary">
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div
+            class="col-lg-6 order-2 order-lg-1 pe-lg-5 text-lg-start text-center"
+          >
+            <h2>Contact me</h2>
+            <div class="call_details mb-4">
+              <label for="" class="col-sm-3">Call me : </label>
+              <p><i class="fa-solid fa-phone"></i> 6281412927</p>
+            </div>
+
+            <div class="call_details col-sm-9 mb-3 mb-lg-2">
+              <label for="" class="col-sm-3">Contact email : </label>
+              <p>
+                <i class="fa-regular fa-envelope"></i> paravind8811@gmail.com
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 mb-4 order-lg-1 mb-lg-0">
+            <form
+              action="https://formsubmit.co/paravind8811@gmail.com"
+              method="POST"
+            >
+              <div class="mb-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Name"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Phone-Number"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  cols="40"
+                  row="4"
+                  type="text"
+                  class="form-control"
+                  id="message"
+                  placeholder="your message"
+                  autocomplete="off"
+                />
+              </div>
+              <button type="submit" class="btn btn2">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0 bg-primary">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-6 col-sm-2 text-center text-md-start">
+            <div class="footer-logo mb-3 mb-md-0">
+              <h1>Aravind</h1>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-8">
+            <ul
+              class="social-icon list-unstyled d-flex justify-content-center justify-content-md-end justify-content-lg-center justify-content-sm-end mb-3 mb-md-0"
+            >
               <li>
-                <a href="https://github.com/A1348089" target="_blank"
-                  ><img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt=""
-                /></a>
+                <a
+                  href="https://www.facebook.com/aravind.cinna.3"
+                  target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/paravind8811/"
+                  target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/paravind8811" target="_blank"
+                  ><i class="fa-brands fa-twitter"></i
+                ></a>
               </li>
               <li>
                 <a
                   href="https://www.linkedin.com/in/p-aravind-04468624b/"
                   target="_blank"
-                  ><img
-                    src="https://static.vecteezy.com/system/resources/previews/018/930/585/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png"
-                    alt=""
-                /></a>
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
               </li>
               <li>
-                <a href="" target="_blank"
-                  ><img
-                    src="https://www.pngitem.com/pimgs/m/20-209894_transparent-round-logo-png-round-facebook-icon-png.png"
-                    alt="facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/paravind8811/" target="_blank"
-                  ><img
-                    src="https://cdn.freebiesupply.com/images/large/2x/instagram-icon-white-on-black-circle.png"
-                    alt=""
-                /></a>
+                <a href="https://github.com/A1348089" target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
               </li>
             </ul>
           </div>
+          <div class="col-lg-4 col-md-12">
+            <div class="copyright-text text-lg-end text-center mb-3 mb-lg-0">
+              <p class="mb-0">
+                copyright 2023 <a href="#"> Aravind Puttamaneni.</a> All rights
+                reserved
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="right">
-        <div class="bg">
-          <img src="1690884305619.png" alt="">
-        </div>
-        
-      </div>
-    </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
